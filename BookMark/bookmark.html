@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bookmark.css">
+    <style>
+        .ErrMsg {
+            color: red;
+            font-size: 12px;
+        }
+
+        .bookmark-item {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .bookmark-title {
+            font-weight: bold;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        .intro{
+            margin-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="BookMark-Section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class=" intro col-12">
+                    <h3 class="hello mt-2">Hello</h3>
+                    <h1 class="name ">Teja</h1>
+                </div>
+                <div class="bookmark_card container">
+                    <p class="header text-center mt-2">Bookmark Your Favorite Sites</p>
+                    <div class="p-4 form-card">
+                        <form id="bookmarkForm">
+                            <label for="siteNameInput" class="label-name">SITE NAME</label>
+                            <input id="siteNameInput" class="form-control label-name" type="text" placeholder="Enter site name" />
+                            <p class="ErrMsg" id="siteNameErrMsg"></p>
+                            <label for="siteUrlInput" class="label-name mt-4">SITE URL</label>
+                            <input id="siteUrlInput" class="form-control label-name" type="text" placeholder="Enter site URL" />
+                            <p class="ErrMsg" id="siteUrlErrMsg"></p>
+                            <button id="submitBtn" class="submit-button ml-auto mt-4" type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <ul id="bookmarksList" class="mt-4">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="bookmark.js"></script>
+</html>
